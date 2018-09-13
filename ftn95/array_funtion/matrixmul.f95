@@ -1,6 +1,6 @@
 program matrixmul
 implicit none
-real,allocatable,dimension(:,:) :: ra1, ra2, ra3
+real,allocatable,dimension(:,:) :: ra1, ra2, ra3 ! why need to use real
 integer :: size
 print *, 'this program shows array manipulating using square array'
 print *, 'we will allocate the space for the array at run time'
@@ -42,10 +42,10 @@ subroutine output(size, ra)
 implicit none
 integer :: row, col, size
 real, dimension(size,size) :: ra
-character :: reply
+!character :: reply
 print *, '----------------------------------------'
 print *, 'hit a key and press enter to continue'
-read *, reply
+!read *, reply
 do row = 1,size
   write (*,10) (ra(row,col), col = 1, size)
 end do
