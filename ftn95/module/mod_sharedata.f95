@@ -16,10 +16,10 @@ end module mod_sharedata
 Program main
 use mod_sharedata
 Implicit None
-write( * , * ) a , b , c !the initiation value
+write( * , * ) a , b , c !the initiation value in specification part
 
 call fc_Init()
-write( * , * ) a , b , c !subroutine value
+write( * , * ) a , b , c !subroutine value in contains of a module
 
 a = 1 ; b = 2 ; c = 3
 write( * , * ) a , b , c !main program value
